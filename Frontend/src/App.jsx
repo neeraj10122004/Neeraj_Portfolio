@@ -1,12 +1,30 @@
-
+import { createBrowserRouter,RouterProvider } from "react-router-dom"
+import {Home,Contact,Resume,Work} from './pages'
 
 function App() {
 
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Home/>
+    },
+    {
+      path: '/Contact',
+      element: <Contact/>
+    },
+    {
+      path: '/Resume',
+      element: <Resume/>
+    },
+    {
+      path: '/Work',
+      element: <Work/>
+    },
+  ])
+
   return (
     <>
-      <div className=" bg-black text-white w-screen h-screen flex justify-center items-center ">
-        <div className=" text-3xl underline font-bold font-mono ">HELLO</div>
-      </div>
+    <RouterProvider router={router}/>
     </>
   )
 }
