@@ -1,6 +1,7 @@
 import { createBrowserRouter,RouterProvider } from "react-router-dom"
 import {Home,Contact,Resume,Work} from './pages'
 
+
 function App() {
 
   const router = createBrowserRouter([
@@ -24,7 +25,9 @@ function App() {
 
   return (
     <>
+    <div className=" bg-black flex justify-center">
     <RouterProvider router={router}/>
+    </div>
     </>
   )
 }
